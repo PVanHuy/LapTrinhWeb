@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2251120293-Phan Van Huy
+    </title>
+    <style>
+        .container { width: 1140px; margin:auto; border:1px solid darkgrey; text-align: end;}
+        header { background: darkolivegreen; height: 120px; position: relative;}
+        main{ background: darkseagreen; min-height: 400px;}
+        footer { background: darkslategray; height: 100px;}
+        #dongho{
+            color: aqua;
+            font-weight: 900;
+            
+        }
+        main{
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #napLai{
+            width: 100px;
+            height: 30px;
+            border-radius: 10px;
+            background-color: burlywood;
+        }
+        #napLai:hover{
+            background-color:  coral;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <span id="dongho" onclick="startStopDH()">Đồng hồ</span>
+        </header>
+        <main>
+            <button id="napLai" onclick="napLai()">Nạp lại</button>
+        </main>
+        <footer></footer>
+    </div> 
+        
+</body>
+</html>
+<script>
+    var dh = null;
+    function tg(){
+        var now = new Date();
+        var h = now.getHours();
+        var m = now.getMinutes();
+        var s = now.getSeconds();
+        document.getElementById("dongho").innerHTML = h + ":" + m + ":" + s;
+
+    }
+    dh = setInterval("tg()",1000);
+    function startStopDH(){
+        if (dh == null) dh = setInterval("tg()", 1000);
+        else {
+            clearInterval(dh);
+            dh = null;
+        }
+    }
+    function loichao(){
+        var hoten = "Phan Văn Huy";
+        alert("Tôi là "+ hoten+ ". Chào bạn! Chúc an lành");
+    }
+    setTimeout(loichao,10000);
+    function napLai(){
+        location.reload();
+    }
+</script>

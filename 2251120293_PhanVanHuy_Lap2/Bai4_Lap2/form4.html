@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <div>
+        <label>Họ và tên: </label>
+        <input type="text" /> <br />
+      </div>
+      <div>
+        <fieldset>
+          <legend>Giới tính</legend>
+          <label><input type="radio" />Nam</label>
+          <label><input type="radio" />Nữ</label>
+        </fieldset>
+        <br />
+      </div>
+      <div>
+        <label>Ngày sinh: </label>
+        <input type="date" value="mm/dd/yyyy" /> <br />
+      </div>
+      <div>
+        <label>Điểm</label>
+        <input type="number" max="10" min="0" step="0.25" /> <br />
+      </div>
+      <div>
+        <label for="job">Nghề nghiệp: </label>
+        <input
+          type="text"
+          id="job"
+          name="job"
+          list="jobs"
+        />
+        <datalist id="jobs">
+          <option value="Bác sĩ"></option>
+          <option value="Kỹ sư"></option>
+          <option value="Giáo viên"></option>
+          <option value="Nhà phát triển phần mềm"></option>
+          <option value="Nhà thiết kế đồ họa"></option>
+        </datalist>
+        <br>
+      </div>
+      <div>
+        <fieldset >
+            <legend>Sở thích</legend>
+            <label ><input type="checkbox" >Thể thao</label>
+            <label ><input type="checkbox" >Du lịch</label>
+            <label ><input type="checkbox" >Âm nhạc</label>
+            <label ><input type="checkbox" >Ẩm thực</label>
+        </fieldset>
+        <br>
+      </div>
+      <div>
+        <label >Ghi chú: </label>
+        <textarea ></textarea> <br>
+      </div>
+      <hr  align="left">
+      <div>
+        <input type="submit" value="Đăng ký">
+        <input type="submit" value="Nhập lại">
+      </div>
+    </form>
+  </body>
+</html>

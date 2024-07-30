@@ -1,0 +1,67 @@
+<html>
+
+<head>
+    <title>Phan Văn Huy - 2251120293</title>
+    <meta charset="utf-8">
+    <script>
+
+        do {
+            var so1 = prompt("Nhập số 1 :");
+            if (isNaN(so1))
+                kt = true;
+            else
+                kt = false;
+        } while (kt) {
+        }
+        do {
+            var so2 = prompt("Nhập số 2 :");
+            if (isNaN(so2))
+                kt = true;
+            else
+                kt = false;
+        } while (kt) {
+        }
+        var pheptinh = prompt("Nhập phép tính :");
+
+
+
+
+    </script>
+</head>
+
+<body>
+
+    <script>
+        switch (pheptinh) {
+
+            case '+':
+                kq = Number(so1) + Number(so2);
+                document.write("<p>Kết quả " + so1 + " + " + so2 + " là " + kq + "</p>");
+                break;
+            case '-':
+                kq = Number(so1) - Number(so2);
+                document.write("<p>Kết quả " + so1 + " - " + so2 + " là " + kq + "</p>");
+                break;
+            case '*':
+                kq = Number(so1) * Number(so2);
+                document.write("<p>Kết quả " + so1 + " * " + so2 + " là " + kq + "</p>");
+                break;
+            case '/':
+                if (Number(so2) !== 0) {
+                    kq = Number(so1) / Number(so2);
+                    document.write("<p>Kết quả " + so1 + " / " + so2 + " là " + kq + "</p>");
+                } else {
+                    document.write("<p>Không thể chia cho 0</p>");
+                }
+                break;
+
+            default:
+                document.write(pheptinh + " không phải là phép tính hợp lệ");
+                break;
+
+        }
+
+    </script>
+</body>
+
+</html>

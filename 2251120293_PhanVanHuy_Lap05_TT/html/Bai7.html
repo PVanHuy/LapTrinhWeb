@@ -1,0 +1,61 @@
+<html>
+
+<head>
+    <title>Phan Văn Huy - 2251120293</title>
+    <meta charset="utf-8">
+    <script>
+        var f0 = prompt("Nhập f0 = ");
+        var f1 = prompt("Nhập f1 = ");
+        var n = prompt("Nhập n = ");
+    </script>
+    <style>
+        .container {
+            width: auto;
+            height: auto;
+            padding: 20px;
+            border-radius: 20px;
+            border-width: 3px;
+            border-color: deeppink;
+            border-style: solid;
+            gap: 10px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            background-color: deeppink;
+        }
+
+        .container div {
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            background-color: yellow;
+            color: blue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <script>
+            for (var i = 0; i < n; i++) {
+                var f = Number(f0) + Number(f1);
+                f0 = f1;
+                f1 = f;
+                document.write("<div><span>" + f + "</span></div>");
+            }
+        </script>
+    </div>
+</body>
+
+</html>

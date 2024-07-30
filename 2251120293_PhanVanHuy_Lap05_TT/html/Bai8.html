@@ -1,0 +1,128 @@
+<html>
+
+<head>
+    <title>Phan Văn Huy - 2251120293</title>
+    <meta charset="utf-8">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container button {
+            width: 50px;
+            height: 50px;
+            border-radius: 5px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .kq-but {
+            background-color: blue;
+            color: yellow;
+        }
+
+        .container h1 {
+            color: red;
+            margin-left: -50px;
+        }
+
+        .container h2 {
+            color: orange;
+            margin-left: -30px;
+        }
+    </style>
+    <script>
+        var val1 = null;
+        var val2 = null;
+        var pheptinh = null;
+        var res = null;
+        function ganso(x) {
+            if (val1 == null) {
+                val1 = x;
+                document.getElementById('val1').innerText = val1;
+            }
+            else {
+                val2 = x;
+                document.getElementById('val2').innerText = val2;
+            }
+            console.log("Số 1 = " + val1);
+            console.log("Số 2 = " + val2);
+        };
+        function ganpheptinh(x) {
+            pheptinh = x;
+            console.log(x);
+            document.getElementById('pheptinh').innerText = pheptinh;
+        }
+        function thuc_hien() {
+
+            if (pheptinh == '+') res = Number(val1) + Number(val2);
+
+            if (pheptinh == '-') res = Number(val1) - Number(val2);
+
+            if (pheptinh == 'x') res = Number(val1) * Number(val2);
+
+            if (pheptinh == ':') res = Number(val1) / Number(val2);
+            document.getElementById('ketqua').innerText = res;
+
+            alert(kq);
+        }
+        function lam_lai() {
+            val1 = null;
+            val2 = null;
+            res = null;
+            pheptinh = null;
+            document.getElementById('val1').innerText = '';
+            document.getElementById('val2').innerText = '';
+            document.getElementById('pheptinh').innerText = '';
+            document.getElementById('ketqua').innerText = '';
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Máy Tính JAVASCRIPT</h1>
+        <h2>Tác Giả : Phan Văn Huy</h2>
+        <table class="container">
+            <tr>
+                <td><button onclick="ganso(7)">7</button></td>
+                <td><button onclick="ganso(8)">8</button></td>
+                <td><button onclick="ganso(9)">9</button></td>
+                <td><button onclick="ganpheptinh('+')">+</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="ganso(4)">4</button></td>
+                <td><button onclick="ganso(5)">5</button></td>
+                <td><button onclick="ganso(6)">6</button></td>
+                <td><button onclick="ganpheptinh('-')">-</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="ganso(1)">1</button></td>
+                <td><button onclick="ganso(2)">2</button></td>
+                <td><button onclick="ganso(3)">3</button></td>
+                <td><button onclick="ganpheptinh('x')">x</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="ganso(0)">0</button></td>
+                <td><button onclick="lam_lai()">C</button></td>
+                <td><button onclick="thuc_hien()">=</button></td>
+                <td><button onclick="ganpheptinh(':')">:</button></td>
+            </tr>
+            <tr>
+                <td><button class="kq-but" id="val1"></button></td>
+                <td><button class="kq-but" id="pheptinh"></button></td>
+                <td><button class="kq-but" id="val2"></button></td>
+                <td><button class="kq-but" id="ketqua"></button></td>
+            </tr>
+        </table>
+    </div>
+    <script>
+
+    </script>
+</body>
+
+</html>

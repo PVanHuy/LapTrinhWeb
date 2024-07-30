@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phan Văn Huy - 2251120293</title>
+    <script>
+        var so1 = +prompt("Nhập số 1: ");
+        while (isNaN(so1)){
+            so1 = +prompt("Nhập lại số 1: ");
+        }
+        var so2 = +prompt("Nhập số 2: ");
+        while (isNaN(so2)){
+            so2 = +prompt("Nhập lại số 2: ");
+        }
+        var pheptinh = prompt("Nhập phép tính: ");
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    switch(pheptinh){
+        case '+':
+            var kq = so1 + so2;
+            document.write("<p>Kết quả so1 " + pheptinh + " so2 là :" + kq + "</p>");
+            break;
+        case '-':
+            var kq = so1 - so2;
+            document.write("<p>Kết quả so1 " + pheptinh + " so2 là :" + kq + "</p>");
+            break;
+        case '*':
+            var kq = so1 * so2;
+            document.write("<p>Kết quả so1 " + pheptinh + " so2 là :" + kq + "</p>");
+            break;
+        case '/':
+            var kq = so1 / so2;
+            document.write("<p>Kết quả so1 " + pheptinh + " so2 là :" + kq + "</p>");
+            break;
+        default:
+            document.write(pheptinh + " không phải là phép tính hợp lệ");
+    }
+</script>

@@ -1,0 +1,26 @@
+.form{
+  width: 100%;
+  height: 1800px;
+  max-height: 98%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+.design{
+  border: 3px solid black;
+  width: 35%;
+  display: block;
+  min-width: 300px
+}
+.design>h2{
+  text-align:center;
+  color: aqua;
+  background-color: blanchedalmond;
+  margin: 0;
+}
+.design p>span{
+  padding-left: 10px;
+}
+.design p>b{
+  padding: 10px;
+}

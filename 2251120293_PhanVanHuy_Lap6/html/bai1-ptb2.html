@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2251120293-Phan Văn Huy</title>
+    <script>
+      var ptb2 = new Object();
+      ptb2.a = null;
+      ptb2.b = null;
+      ptb2.c = null;
+      ptb2.nhap = function () {
+        this.a = window.prompt("Nhap số a");
+        while (isNaN(this.a)) {
+          this.a = window.prompt("Nhap lai số a");
+        }
+        this.b = window.prompt("Nhap số b");
+        while (isNaN(this.b)) {
+          this.b = window.prompt("Nhap lai số b");
+        }
+        this.c = window.prompt("Nhập số c");
+        while (isNaN(this.c)) {
+          this.c = window.prompt("Nhap lai số c");
+        }
+        str = this.a + "x<sup>2</sup> + " + this.b + "x + " + this.c + " =0";
+        document.getElementById("pt").innerHTML = str;
+      };
+      ptb2.giai = function () {
+        var delta = this.b * this.b - 4 * this.a * this.c;
+        if (delta < 0) {
+          document.getElementById("kq").innerHTML = "Vô nghiệm";
+        } else if (delta == 0) {
+          var str =
+            "Phương trình có nghiệm duy nhất là x = " + -this.b / (2 * this.a);
+          document.getElementById("kq").innerHTML = str;
+        } else {
+          var x1 = (-this.b + Math.sqrt(delta)) / (2 * this.a);
+          var x2 = (-this.b - Math.sqrt(delta)) / (2 * this.a);
+          var ketqua1 = "Phương trình có 2 nghiệm phân biệt: x1 = " + x1;
+          var ketqua2 = " và x2 = " + x2;
+          document.getElementById("kq").innerHTML = ketqua1 + ketqua2;
+        }
+      };
+    </script>
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .container {
+        border: 1px solid;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        padding: 0px;
+        margin: 0px;
+        height: 200px;
+        background-color: gray;
+        width: 400px;
+      }
+      .container > h2 {
+        background-color: cadetblue;
+        color: white;
+        text-align: center;
+        margin-top: 0;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #pt {
+        color: rgb(252, 112, 13);
+        text-align: center;
+        margin-bottom: 10px;
+        padding-top: 0px;
+      }
+      #kq {
+        color: rgb(20, 236, 236);
+        text-align: center;
+      }
+      .nut > button {
+        color: bisque;
+        background-color: rgb(130, 33, 33);
+        width: 25%;
+        height: 30px;
+        padding-bottom: 0;
+        margin-bottom: 0;
+        border: 2px solid rgb(130, 33, 33);
+      }
+      .nut {
+        text-align: center;
+        margin-top: auto;
+        margin-bottom: 5px;
+      }
+      .nut > button:hover {
+        border-color: rgb(11, 130, 234);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>GIẢI PHƯƠNG TRÌNH BẬC 2</h2>
+      <div id="pt">Phương trình</div>
+      <div id="kq">Kết quả</div>
+      <div class="nut">
+        <button onclick="ptb2.nhap()">Nhập A B C</button>
+        <button onclick="ptb2.giai()">Giải PT</button>
+      </div>
+    </div>
+  </body>
+</html>

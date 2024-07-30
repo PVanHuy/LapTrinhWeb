@@ -1,0 +1,57 @@
+<html>
+
+<head>
+    <title>Phan Văn Huy - 2251120293</title>
+    <meta charset="utf-8">
+    <script>
+        var pi = 3.14;
+        var r = prompt("Nhập bán kính = ");
+        var cv = 2 * r * pi;
+        var dt = Math.pow(r, 2) * pi;  
+    </script>
+    <style>
+        .container {
+            width: 350px;
+            height: auto;
+            padding: 20px;
+            border-radius: 20px;
+            border-width: 3px;
+            border-color: deeppink;
+            border-style: solid;
+        }
+
+        .container h3 {
+            color: burlywood;
+            text-align: center;
+        }
+
+        .container p {
+            color: deeppink;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50vh;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <h3> TÍNH CHU VI VÀ DIỆN TÍCH HÌNH TRÒN</h3>
+        <p><span>Chu vi = </span> <span id="cv"></span></p>
+        <p><span>Diện tích = </span> <span id="dt"></span></p>
+        <script>
+            document.getElementById("cv").innerHTML = cv;
+            document.getElementById("dt").innerHTML = dt;
+
+        </script>
+
+    </div>
+</body>
+
+</html>

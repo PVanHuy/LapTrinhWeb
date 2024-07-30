@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <title>Bài 1 - Lab 05</title>
+    <meta charset="utf-8" />
+    <script>
+      var hoten = "Phan Văn Huy";
+      var masv = "2251120293";
+      var ngaysinh = "8/12/2004";
+    </script>
+  </head>
+  <body>
+    <h2>Thông tin cá nhân:</h2>
+    <p>
+      <span>Họ tên: </span><b id="hoten"></b>
+      <b id="hoten">
+        <script>
+          document.write(hoten);
+        </script>
+      </b>
+    </p>
+    <p>
+      <span>Mã SV: </span><b id="masv"></b>
+      <b id="masv">
+        <script>
+          document.write(masv);
+        </script>
+      </b>
+    </p>
+    <p>
+      <span>Ngày sinh: </span><b id="ns"></b>
+      <script>
+        document.getElementById("ns").innerHTML = ngaysinh;
+      </script>
+    </p>
+  </body>
+</html>

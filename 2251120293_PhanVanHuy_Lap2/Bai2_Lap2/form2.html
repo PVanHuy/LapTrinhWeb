@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form method="post" enctype="multipart/form-data">
+      <div>
+        <label for="FullName">HỌ TÊN: </label> <br />
+        <input type="text" name="FullName" id="FullName" /> <br />
+      </div>
+      <div>
+        <label>GIỚI TÍNH: <input type="radio" checked /> Nam </label>
+        <label><input type="radio" /> Nữ </label> <br />
+      </div>
+      <div>
+        <label for="Image">HÌNH ẢNH:</label> <br />
+        <input type="file" name="Image" id="Image" /> <br />
+      </div>
+      <div>
+        <label>QUỐC TỊCH</label> <br />
+        <select>
+          <option value="1">VIỆT NAM</option>
+        </select>
+        <br />
+      </div>
+      <div>
+        <label>SỞ THÍCH: </label> <br />
+        <label><input type="checkbox" />THỂ THAO</label>
+        <label><input type="checkbox" checked />DU LỊCH</label>
+        <label><input type="checkbox" />ÂM NHẠC</label>
+        <label><input type="checkbox" />ẨM THỰC</label>
+        <br />
+      </div>
+      <div>
+        <label>GHI CHÚ:</label> <br />
+        <textarea></textarea>
+      </div>
+      <div>
+        <hr width="400" align="left" />
+        <button type="submit">Login</button>
+      </div>
+    </form>
+  </body>
+</html>

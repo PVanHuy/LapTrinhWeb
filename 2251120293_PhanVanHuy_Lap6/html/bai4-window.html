@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2251120293-Phan Văn Huy</title>
+    <style>
+        div{
+            border: 2px solid black;
+            font-size: 12px;
+            width: 400px;
+            display: flex;
+           flex-direction: column;
+           text-align: center;
+           margin: auto;
+           border-radius: 20px;
+           background-color: antiquewhite;
+           color: cornflowerblue;
+        }
+       button{
+        border-radius: 10px;
+        background-color: rgb(175, 175, 14);
+        width: 250px;
+        font-size: 10px;
+        margin: 10px 10px;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+       }
+       button:hover{
+        color: aqua;
+        border-color: aqua;
+        cursor: pointer;
+       }
+    </style>
+    <script>
+        var w;
+        function moWin(){
+            w= window.open("thongtin.html","tt","width=400, height=200, top=50,left=600");
+            w.focus();
+        }
+        function dichuyen1chut(){
+            w.moveBy(5,10);
+            w.focus();
+        }
+        function dichuyenDen(){
+            var x=prompt("Nhap toa do X: ");
+            var y=prompt("Nhap toa do Y: ");
+            w.moveBy(x,y);
+            w.focus();
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <h1>Thực hành với đối tượng Window</h1>
+        <button onclick="moWin()"><h1>Mở win</h1></button>
+        <button onclick="w.print()"><h1>In Ấn</h1></button>
+        <button onclick="dichuyen1chut()"><h1>Di chuyển 1 chút</h1></button>
+        <button onclick="dichuyenDen()"><h1>Di chuyển tới điểm</h1></button>
+        <button onclick="w.close()"><h1>Đóng win</h1></button>
+    </div>
+</body>
+</html>

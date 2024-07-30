@@ -1,0 +1,68 @@
+<html>
+
+<head>
+    <title>Phan Văn Huy - 2251120293</title>
+    <meta charset="utf-8">
+    <script>
+        var slx = sessionStorage.getItem("slx");
+        if (slx == null)
+            slx = 0;
+        slx++;
+        sessionStorage.setItem("slx", slx);
+    </script>
+    <style>
+        .container {
+            width: 450px;
+            height: auto;
+            position: absolute;
+            box-sizing: border-box;
+            background-color: gray;
+            border-radius: 20px;
+            overflow: hidden;
+            justify-content: space-between;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container h2 {
+            background-color: greenyellow;
+            color: rgb(14, 2, 42);
+            text-align: center;
+            padding: 10px 0;
+            margin: 0;
+            font-size: 30px;
+        }
+
+        .container h3 {
+            text-align: center;
+            color: yellow;
+            font-size: 30px;
+        }
+
+        .container h4 {
+            text-align: center;
+            color: aqua;
+            margin-top: -30px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>LƯU BIẾN VÀO SESSIONSTORAGE</h2>
+        <h3 id="h3"></h3>
+        <h4>Gõ lại phím F5 để xem lại kết quả</h4>
+    </div>
+    <script>
+        document.getElementById('h3').innerHTML = "Bạn đã xem trang này: " + slx + " lần";
+    </script>
+</body>
+
+</html>
